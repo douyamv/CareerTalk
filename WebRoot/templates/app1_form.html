@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>应用管理平台首页</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Toastr style -->
+    <link href="../css/plugins/toastr/toastr.min.css" rel="stylesheet">
+
+    <!-- Gritter -->
+    <link href="../js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+
+    <link href="../css/animate.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+
+</head>
+<style type="text/css">
+    .amp-main-wrapper{
+        padding: 0 15px;
+    }
+    .amp-main-header {
+        border-top: 0;
+        padding: 20px 25px;
+    }
+
+    .amp-main-sortarea{
+        min-height: 50px;
+    }
+    .amp-appStore-listIcon{
+        float:left;
+        display: block;
+        margin-right: 15px;
+    }
+    .amp-appStore-descript{
+        display: inline-block;
+        float:left;
+    }
+    .amp-appStore-title{
+        margin-bottom: 2px;
+        max-width: 126px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color:#818385;
+        font-weight: 500;
+
+    }
+    .amp-appStore-descript .amp-appStore-title{
+        margin-top: 0px;
+    }
+    .amp-appStore-list{
+        float:left;
+        /*margin:15px;*/
+        margin:15px -15px 15px 0px;
+    }
+    .amp-appStore-explain{
+        display: block;
+        color: #a6a6a6;
+        font-size: 12px;
+    }
+    .amp-appStore-btnStore{
+        padding: 0px 15px;
+        margin-top: 5px;
+        background-color: #23c6c8;
+        border-color:#23c6c8;
+        color:#FFFFFF;
+    }
+    .amp-appStore-btnStore:hover{
+        color: #FFFFFF;
+        background-color: #4dd7d9;
+        border-color:#4dd7d9;
+    }
+    .amp-star small{
+        color:#a6a6a6;
+    }
+    .amp-appStore-yellowStar{
+        color: #f8ac59;
+        letter-spacing: -3px;
+    }
+    .amp-appStore-grayStar{
+        color: #cecece;
+        letter-spacing: -3px;
+    }
+
+    .amp-main-lpart{
+        margin-right: 225px;
+    }
+    .amp-main-rpart{
+        width: 200px;
+    }
+    .amp-app-item{
+        margin-top: 8px;
+    }
+
+    .amp-appStore-upArrow{
+        float: right;
+        font-size: 12px;
+        color: red;
+    }
+    .amp-appStore-downArrow{
+        float: right;
+        font-size: 12px;
+        color: blue;
+    }
+    .amp-appStore-rankingIcon, .amp-appStore-listIcon{
+        width:72px;
+        height: 72px;
+    }
+    .amp-appStore-rankFont1{
+        font-weight: 600;
+        font-size: 14px;
+        color: #676a6c;
+    }
+    .amp-appStore-rankFont2{
+        margin-left: 14px;
+    }
+    .amp-appSearchResult-content{
+        padding:15px;
+    }
+    .amp-appSearchResult-ibox{
+
+        border-top:4px solid #e7eaec ;
+
+    }
+    .amp-appSearchResult-header {
+        font-size: 16px;
+    }
+    .amp-appSearchResult-header .item-color {
+        color:orange;
+    }
+    .amp-appSearchResult-ibox .amp-appSearchResults-subTitle{
+        margin-top: 30px;
+    }
+    .amp-appSearchResult-selDiv{
+        margin-top: 50px;
+        width: 72px;
+        height: 22px;
+        background-color: rgba(115, 112, 107, 0.81);
+        z-index: 200;
+        color: white;
+        position: absolute;
+        text-align: center;
+        border-radius: 0 0 12px 12px;
+        font-size: 9px;
+        padding-top: 2px;
+        opacity:0;
+        -webkit-transition:all 500ms ease;
+        -moz-transition:all 500ms ease;
+        -ms-transition:all 500ms ease;
+        -o-transition:all 500ms ease;
+        transition:all 500ms ease;
+    }
+
+    .amp-appSearchResult-list:hover>.amp-appSearchResult-selDiv {
+        filter:alpha(opacity=100);
+        opacity:1;
+    }
+    .amp-appSearchResult-selDiv small{
+        font-size: 12px;
+    }
+    .amp-form-style1 .form-group label {
+        display: inline-block;
+        height: 34px;
+        background-color: rgb(249,249,249);
+    }
+</style>
+<body class="gray-bg">
+
+<div class="gray-bg amp-main-wrapper clearfix" >
+<div class="amp-appSearchResult-content">
+
+<div class="ibox amp-main-appbox1 amp-appSearchResult-ibox">
+<div class="ibox-content clearfix amp-form-style1">
+<h4>个人信息</h4>
+<hr>
+    <div class="col-lg-6 col-md-6 col-sm-6">
+        <form method="get" class="form-horizontal">
+            <div class="form-group"><label class="col-sm-4 control-label">学号</label>
+                <div class="col-sm-8"><input type="text" class="form-control" placeholder="请输入学号"></div>
+            </div>
+            <div class="form-group"><label class="col-sm-4 control-label">曾用名</label>
+                <div class="col-sm-8"><input type="text" class="form-control" placeholder="请输入曾用名">
+                </div>
+            </div>
+            <div class="form-group"><label class="col-sm-4 control-label">性别</label>
+                <div class="col-sm-8"><select class="form-control" name="account">
+                    <option>请选择</option>
+                    <option>男</option>
+                    <option>女</option>
+                </select>
+                </div>
+            </div>
+            <div class="form-group"><label class="col-sm-4 control-label">政治面貌</label>
+                <div class="col-sm-8"><select class="form-control" name="account">
+                    <option>请选择</option>
+                    <option>党员</option>
+                    <option>团员</option>
+                </select>
+                </div>
+            </div>
+            <div class="form-group"><label class="col-sm-4 control-label">身份证件类型</label>
+                <div class="col-sm-8"><select class="form-control" name="account">
+                    <option>请选择</option>
+                    <option>ID</option>
+                    <option>其他</option>
+                </select>
+                </div>
+            </div>
+            <div class="form-group"><label class="col-sm-4 control-label">出生日期</label>
+                <div class="col-sm-8"><input type="text" class="form-control" placeholder="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-4 control-label">生源地</label>
+                <div class="col-sm-8">
+                    <select class="form-control" name="account">
+                        <option>请选择</option>
+                        <option>江苏</option>
+                        <option>浙江</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group"><label class="col-sm-4 control-label">国家地区</label>
+                <div class="col-sm-8"><select class="form-control" name="account">
+                    <option>请选择</option>
+                    <option>中国</option>
+                    <option>美国</option>
+                </select>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="col-lg-6 col-md-6 col-sm-6">
+        <form method="get" class="form-horizontal">
+            <div class="form-group"><label class="col-sm-4 control-label">姓名</label>
+                <div class="col-sm-8"><input type="text" class="form-control" placeholder="请输入姓名"></div>
+            </div>
+            <div class="form-group"><label class="col-sm-4 control-label">姓名拼音</label>
+                <div class="col-sm-8"><input type="text" class="form-control" placeholder="请输入姓名拼音">
+                </div>
+            </div>
+            <div class="form-group"><label class="col-sm-4 control-label">民族</label>
+                <div class="col-sm-8"><select class="form-control" name="account">
+                    <option>请选择</option>
+                    <option>汉</option>
+                    <option>满</option>
+                </select>
+                </div>
+            </div>
+            <div class="form-group"><label class="col-sm-4 control-label">婚姻状况</label>
+                <div class="col-sm-8"><select class="form-control" name="account">
+                    <option>请选择</option>
+                    <option>已婚</option>
+                    <option>未婚</option>
+                </select>
+                </div>
+            </div>
+            <div class="form-group"><label class="col-sm-4 control-label">身份证号码</label>
+                <div class="col-sm-8"><input type="text" class="form-control" placeholder="请输入身份证号码">
+                </div>
+            </div>
+            <div class="form-group"><label class="col-sm-4 control-label">籍贯</label>
+                <div class="col-sm-8"><select class="form-control" name="account">
+                    <option>请选择</option>
+                    <option>江苏</option>
+                    <option>浙江</option>
+                </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-4 control-label">健康状况</label>
+                <div class="col-sm-8">
+                    <select class="form-control" name="account">
+                        <option>请选择</option>
+                        <option>健康</option>
+                        <option>不健康</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group"><label class="col-sm-4 control-label">血型</label>
+                <div class="col-sm-8"><select class="form-control" name="account">
+                    <option>请选择</option>
+                    <option>A</option>
+                    <option>O</option>
+                </select>
+                </div>
+            </div>
+        </form>
+    </div>
+
+        <div class="" style="text-align: center">
+            <button class="btn btn-primary" type="submit">保存</button>
+            <button class="btn btn-white" type="submit">返回</button>
+        </div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<!-- Mainly scripts -->
+<script src="../js/jquery-2.1.1.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+
+</body>
+</html>

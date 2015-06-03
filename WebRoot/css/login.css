@@ -1,0 +1,374 @@
+/** 登录页 begin **/
+.amp-login-bg {
+    background: white url(../img/login-bg-autumn.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.amp-login-footer {
+    position: fixed;
+    bottom: 25px;
+    width: 100%;
+    color: #f3f3f3;
+    text-align: center;
+    font-size: 12px;
+}
+.amp-login-top {
+    margin-bottom: 140px;
+    float: right;
+}
+.amp-login-middle {
+    margin: 0 15px;
+}
+.amp-login-lp {
+    height: 282px;
+}
+.amp-login-rp {
+    height: 282px;
+}
+.amp-login-linner {
+    margin-right: 165px;
+    float: right;
+    margin-top: 156px;
+}
+.amp-login-rinner {
+    margin-left: 125px;
+    width: 340px;
+    height: 282px;
+}
+/* 左侧登录方式选择*/
+.amp-login-ltitle {
+    font-size: 16px;
+    color: #fff;
+    padding-bottom: 5px;
+    font-weight: 600;
+}
+.amp-loing-style {
+    margin-top: 15px;
+    height: 34px;
+    line-height: 34px;
+}
+.amp-loing-style a {
+    display: inline-block;
+}
+.amp-loing-style a > span {
+    float:left;
+}
+.amp-loing-style a > span:first-child{
+    width: 34px;
+    height: 34px;
+    text-align: center;
+    background-color: rgba(255,255,255,.8);
+    color: #5b5e67;
+}
+.amp-loing-style a > span:last-child{
+    width: 174px;
+    padding-left: 15px;
+    color: #fff;
+    font-size: 12px;
+    background-color: rgba(255,255,255,.35);
+
+}
+.amp-loing-style a > span:last-child:hover {
+    background-color: rgba(255,255,255,.55);
+}
+.amp-loing-style a > span:first-child:hover {
+    color: #4c4c4c;
+    background-color: white;
+}
+/* 右侧登录选择*/
+.amp-login-rinner .nav li {
+    width: 50%;
+    text-align: center;
+}
+.amp-login-rinner .nav-tabs {
+    border-bottom: none;
+}
+.amp-login-rinner .nav li a{
+    border: none;
+    margin: 0;
+    border-radius: 0;
+    background-color: rgba(138, 138, 137, .8);
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 7px 0 8px 0;
+}
+.amp-login-rinner .nav-tabs > li.active > a,
+.amp-login-rinner .nav-tabs > li.active > a:hover,
+.amp-login-rinner .nav-tabs > li.active > a:focus {
+    border-style:none;
+}
+.amp-login-rinner .nav-tabs > li.active > a {
+    background-color: rgba(255,255,255,.9);
+    color: #676a6c;
+}
+
+.amp-login-rinner  .ibox-content {
+    background-color: rgba(255,255,255,.9);
+    border: none;
+    margin-top: 1px;
+    padding: 25px 35px 22px 35px;
+    font-size: 12px;
+    min-height: 248px;
+}
+.amp-btn-primary {
+    background-color: #1ab394;
+    border-color: #1ab394;
+    color: #FFFFFF;
+}
+.amp-btn-primary:hover{
+    background-color: #18a689;
+    border-color: #18a689;
+    color: #fff;
+}
+.amp-login-form .input-group-addon{
+    background-color: rgb(242,242,242);
+    border-color: #ccc;
+    font-size: 16px;
+}
+.amp-login-form .form-control {
+    border-color: #ccc;
+}
+.checkbox .amp-login-label {
+    padding-left: 0;
+}
+.amp-login-forgetp {
+    color: #aaa;
+}
+.amp-login-forgetp:hover{
+    color: #676a6c;
+}
+.amp-login-registernow {
+    float: right;
+    color: #1ab394;
+}
+.amp-login-registernow:hover{
+    color: #18a689;;
+}
+.amp-login-error {
+    color: #ED5565;
+    margin-left: 36px;
+}
+
+
+/* 响应式样式 */
+@media (max-width: 992px) {
+    .amp-login-top {
+        margin-bottom: 20px;
+        text-align: center;
+        float: initial;
+    }
+    .amp-login-linner {
+        margin: 0 auto;
+        float: initial;
+        text-align: center;
+    }
+    .amp-login-lp {
+        height: 150px;
+    }
+    .amp-login-rinner {
+        margin: 0 auto;
+    }
+}
+@media (max-height: 650px) {
+    .amp-login-footer {
+        display: none;
+    }
+}
+
+.flare-wrapper {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.flareRiseUp {
+    position: absolute;
+    top: 0;
+    left: -800px;
+    width: 1600px;
+    height: 757px;
+    background: url("../img/flareRiseUp.png");
+    -webkit-animation-name: flareRiseUp;
+    animation-name: flareRiseUp;
+    -webkit-animation-duration: 60s;
+    animation-duration: 60s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    -animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes flareRiseUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate(0, 300px) rotate(-135deg) scale(0.2);
+        transform: translate(0, 300px) rotate(-135deg) scale(0.2)
+    }
+    10% {
+        opacity: 1;
+        -webkit-transform: translate(0, -300px) rotate(45deg) scale(1);
+        transform: translate(0, -300px) rotate(45deg) scale(1)
+    }
+    18% {
+        opacity: .8
+    }
+    20% {
+        opacity: 1;
+        -webkit-transform: translate(0, -300px) rotate(40deg) scale(1);
+        transform: translate(0, -300px) rotate(40deg) scale(1)
+    }
+    29% {
+        opacity: .7
+    }
+    30% {
+        opacity: 1;
+        -webkit-transform: translate(0, -300px) rotate(43deg) scale(1);
+        transform: translate(0, -300px) rotate(43deg) scale(1)
+    }
+    32% {
+        opacity: .7
+    }
+    33% {
+        opacity: .9
+    }
+    39% {
+        opacity: .7
+    }
+    40% {
+        opacity: 1;
+        -webkit-transform: translate(0, -300px) rotate(42deg) scale(1);
+        transform: translate(0, -300px) rotate(42deg) scale(1)
+    }
+    41% {
+        opacity: .7
+    }
+    42% {
+        opacity: 1
+    }
+    43% {
+        opacity: .7
+    }
+    50% {
+        opacity: 1;
+        -webkit-transform: translate(0, -300px) rotate(46deg) scale(1);
+        transform: translate(0, -300px) rotate(46deg) scale(1)
+    }
+    51% {
+        opacity: .7
+    }
+    52% {
+        opacity: 1
+    }
+    53% {
+        opacity: .7
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: translate(0, -300px) rotate(42deg) scale(1);
+        transform: translate(0, -300px) rotate(42deg) scale(1)
+    }
+    64% {
+        opacity: 0
+    }
+    95% {
+        opacity: 0;
+        -webkit-transform: translate(0, 0) rotate(100deg) scale(0.1);
+        transform: translate(0, 0) rotate(100deg) scale(0.1)
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translate(0, 300px) rotate(200deg) scale(0.1);
+        transform: translate(0, 300px) rotate(200deg) scale(0.1)
+    }
+}
+@keyframes flareRiseUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate(0, 300px) rotate(-135deg) scale(0.2);
+        transform: translate(0, 300px) rotate(-135deg) scale(0.2)
+    }
+    10% {
+        opacity: 1;
+        -webkit-transform: translate(0, -300px) rotate(45deg) scale(1);
+        transform: translate(0, -300px) rotate(45deg) scale(1)
+    }
+    18% {
+        opacity: .8
+    }
+    20% {
+        opacity: 1;
+        -webkit-transform: translate(0, -300px) rotate(40deg) scale(1);
+        transform: translate(0, -300px) rotate(40deg) scale(1)
+    }
+    29% {
+        opacity: .7
+    }
+    30% {
+        opacity: 1;
+        -webkit-transform: translate(0, -300px) rotate(43deg) scale(1);
+        transform: translate(0, -300px) rotate(43deg) scale(1)
+    }
+    32% {
+        opacity: .7
+    }
+    33% {
+        opacity: .9
+    }
+    39% {
+        opacity: .7
+    }
+    40% {
+        opacity: 1;
+        -webkit-transform: translate(0, -300px) rotate(42deg) scale(1);
+        transform: translate(0, -300px) rotate(42deg) scale(1)
+    }
+    41% {
+        opacity: .7
+    }
+    42% {
+        opacity: 1
+    }
+    43% {
+        opacity: .7
+    }
+    50% {
+        opacity: 1;
+        -webkit-transform: translate(0, -300px) rotate(46deg) scale(1);
+        transform: translate(0, -300px) rotate(46deg) scale(1)
+    }
+    51% {
+        opacity: .7
+    }
+    52% {
+        opacity: 1
+    }
+    53% {
+        opacity: .7
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: translate(0, -300px) rotate(42deg) scale(1);
+        transform: translate(0, -300px) rotate(42deg) scale(1)
+    }
+    64% {
+        opacity: 0
+    }
+    95% {
+        opacity: 0;
+        -webkit-transform: translate(0, 0) rotate(100deg) scale(0.1);
+        transform: translate(0, 0) rotate(100deg) scale(0.1)
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translate(0, 300px) rotate(200deg) scale(0.1);
+        transform: translate(0, 300px) rotate(200deg) scale(0.1)
+    }
+}
+/** 登录页 end **/

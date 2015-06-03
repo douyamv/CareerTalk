@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>应用管理平台首页</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Data Tables -->
+    <link href="../css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="../css/plugins/dataTables/dataTables.responsive.css" rel="stylesheet">
+    <link href="../css/plugins/dataTables/dataTables.tableTools.min.css" rel="stylesheet">
+    
+    <link href="../css/animate.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+
+    <div class="gray-bg amp-main-wrapper clearfix" >
+        <div class="row" style="margin-bottom: 10px;"></div>
+       
+        <div class="rows">
+            <div class="col-md-12">
+                <div class="ibox amp-main-servicetips">
+                    <div class="ibox-title">
+                        <span class="title16">数据查询</span>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="alert alert-warning">
+                            本月尚有 {老师数量} 位老师尚未提交听课记录。<button type="button" class="btn btn-danger btn-xs pull-right " data-toggle="modal" data-target="#reminderModal">提醒他们</button>
+                        </div>
+                        <form method="get" class="form-horizontal">
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">查听课时间</label>
+                                <div class="col-sm-3">
+                                    <div class="input-group m-b">
+                                        <input type="text" class="form-control">
+                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="input-group m-b">
+                                        <input type="text" class="form-control">
+                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-sm-4">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                                        <input type="text" class="form-control"> <span class="input-group-btn"> 
+                                        <button type="button" class="btn btn-primary">查询</button> </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div>
+                            <table class="table table-bordered" id="editable">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>学院</th>
+                                    <th>专业</th>
+                                    <th>班级</th>
+                                    <th>课程名称</th>
+                                    <th>课程类型</th>
+                                    <th>应到</th>
+                                    <th>实到</th>
+                                    <th>迟到早退</th>
+                                    <th>查听课人</th>
+                                    <th>查听课人身份</th>
+                                    <th>查听课时间</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>计算机学院</td>
+                                    <td>信息工程</td>
+                                    <td>信息36</td>
+                                    <td>网络基础</td>
+                                    <td>必修</td>
+                                    <td>36</td>
+                                    <td>35</td>
+                                    <td>1</td>
+                                    <td>王老师</td>
+                                    <td>班主任</td>
+                                    <td>2015-4-12</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div>
+                            <a href="tingchake.html" class="btn btn-primary">填写及提交记录</a>
+                            <a href="xueyuantongji.html" class="btn btn-primary" >学院数据统计</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </div>
+       
+        <!-- Modal -->
+        <div class="modal fade" id="reminderModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">本月未提交的老师</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <img alt="image" class="img-circle thumbnail" src="../img/qddamx03.jpg">
+                                <div class="center-block">王老师</div>
+                            </div>
+                            <div class="col-md-2">
+                                <img alt="image" class="img-circle thumbnail" src="../img/tpmlmxab001.jpg">
+                                <div class="center-block">张老师</div>
+                            </div>
+                            <div class="col-md-2">
+                                <img alt="image" class="img-circle thumbnail" src="../img/tpmlmxqd07.jpg">
+                                <div class="center-block">李老师</div>
+                            </div>
+                            <div class="col-md-2">
+                                <img alt="image" class="img-circle thumbnail" src="../img/qddamx03.jpg">
+                                <div class="center-block">赵老师</div>
+                            </div>
+                            <div class="col-md-2">
+                                <img alt="image" class="img-circle thumbnail" src="../img/tpmlmxab001.jpg">
+                                <div class="center-block">蒋老师</div>
+                            </div>
+                            <div class="col-md-2">
+                                <img alt="image" class="img-circle thumbnail" src="../img/tpmlmxqd07.jpg">
+                                <div class="center-block">吴老师</div>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </div>
+
+
+    <!-- Mainly scripts -->
+    <script src="../js/jquery-2.1.1.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="../js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- jQuery UI -->
+    <script src="../js/plugins/jquery-ui/jquery-ui.min.js"></script>
+
+    <!-- Data Tables -->
+    <script src="../js/plugins/dataTables/jquery.dataTables.js"></script>
+    <script src="../js/plugins/dataTables/dataTables.bootstrap.js"></script>
+    <script src="../js/plugins/dataTables/dataTables.responsive.js"></script>
+    <script src="../js/plugins/dataTables/dataTables.tableTools.min.js"></script>
+
+    <!-- Page-Level Scripts -->
+    <script>
+        $(document).ready(function() {
+            /* Init DataTables */
+            var oTable = $('#editable').dataTable();
+        });
+    </script>
+
+</body>
+</html>

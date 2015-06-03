@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>应用管理平台首页</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Toastr style -->
+    <link href="../css/plugins/toastr/toastr.min.css" rel="stylesheet">
+
+    <!-- Gritter -->
+    <link href="../js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+
+    <link href="../css/animate.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+
+</head>
+<style type="text/css">
+    .amp-main-wrapper{
+        padding: 0 15px;
+    }
+    .amp-main-header {
+        border-top: 0;
+        padding: 20px 25px;
+    }
+
+    .amp-main-sortarea{
+        min-height: 50px;
+    }
+    .amp-appStore-listIcon{
+        float:left;
+        display: block;
+        margin-right: 15px;
+    }
+    .amp-appStore-descript{
+        display: inline-block;
+        float:left;
+    }
+    .amp-appStore-title{
+        margin-bottom: 2px;
+        max-width: 126px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color:#818385;
+        font-weight: 500;
+
+    }
+    .amp-appStore-descript .amp-appStore-title{
+        margin-top: 0px;
+    }
+    .amp-appStore-list{
+        float:left;
+        /*margin:15px;*/
+        margin:15px -15px 15px 0px;
+    }
+    .amp-appStore-explain{
+        display: block;
+        color: #a6a6a6;
+        font-size: 12px;
+    }
+    .amp-appStore-btnStore{
+        padding: 0px 15px;
+        margin-top: 5px;
+        background-color: #23c6c8;
+        border-color:#23c6c8;
+        color:#FFFFFF;
+    }
+    .amp-appStore-btnStore:hover{
+        color: #FFFFFF;
+        background-color: #4dd7d9;
+        border-color:#4dd7d9;
+    }
+    .amp-star small{
+        color:#a6a6a6;
+    }
+    .amp-appStore-yellowStar{
+        color: #f8ac59;
+        letter-spacing: -3px;
+    }
+    .amp-appStore-grayStar{
+        color: #cecece;
+        letter-spacing: -3px;
+    }
+
+    .amp-main-lpart{
+        margin-right: 225px;
+    }
+    .amp-main-rpart{
+        width: 200px;
+    }
+    .amp-app-item{
+        margin-top: 8px;
+    }
+
+    .amp-appStore-upArrow{
+        float: right;
+        font-size: 12px;
+        color: red;
+    }
+    .amp-appStore-downArrow{
+        float: right;
+        font-size: 12px;
+        color: blue;
+    }
+    .amp-appStore-rankingIcon, .amp-appStore-listIcon{
+        width:72px;
+        height: 72px;
+    }
+    .amp-appStore-rankFont1{
+        font-weight: 600;
+        font-size: 14px;
+        color: #676a6c;
+    }
+    .amp-appStore-rankFont2{
+        margin-left: 14px;
+    }
+    .amp-appSearchResult-content{
+        padding:15px;
+    }
+    .amp-appSearchResult-ibox{
+
+        border-top:4px solid #e7eaec ;
+
+    }
+     .amp-appSearchResult-header {
+        font-size: 16px;
+    }
+    .amp-appSearchResult-header .item-color {
+        color:orange;
+    }
+    .amp-appSearchResult-ibox .ibox-content {
+        padding-top: 0;
+    }
+    .amp-appSearchResult-ibox .amp-appSearchResults-subTitle{
+        font-size: 16px;
+        margin-top: 10px;
+        margin-bottom: -10px;
+    }
+    .amp-appSearchResult-selDiv{
+        margin-top: 50px;
+        width: 72px;
+        height: 22px;
+        background-color: rgba(115, 112, 107, 0.81);
+        z-index: 200;
+        color: white;
+        position: absolute;
+        text-align: center;
+        border-radius: 0 0 12px 12px;
+        font-size: 9px;
+        padding-top: 2px;
+        opacity:0;
+        -webkit-transition:all 500ms ease;
+        -moz-transition:all 500ms ease;
+        -ms-transition:all 500ms ease;
+        -o-transition:all 500ms ease;
+        transition:all 500ms ease;
+    }
+
+    .amp-appSearchResult-list:hover>.amp-appSearchResult-selDiv {
+        filter:alpha(opacity=100);
+        opacity:1;
+    }
+    .amp-appSearchResult-selDiv small{
+        font-size: 12px;
+    }
+</style>
+<body class="gray-bg">
+
+   <div class="gray-bg amp-main-wrapper clearfix" >
+      <div class="amp-appSearchResult-content">
+      <div class="seachpanel-header">
+          <p>以下显示<span class="amp-appSearchResult-header">“<span class="item-color">服务查询</span>”</span>的相关搜索结果</p>
+      </div>
+      <div class="ibox amp-main-appbox1 amp-appSearchResult-ibox">
+      <div class="ibox-content">
+          <div class="amp-appSearchResults-subTitle">学生服务</div>
+          <hr>
+          <div class="row">
+              <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                  <div class="amp-appStore-list">
+                      <a class="amp-appSearchResult-list" href="#">
+                          <span style="background:url('../img/png72/课表查询.png')" class="amp-appStore-listIcon"></span>
+                          <div class='amp-appSearchResult-selDiv'><small>查看详情</small></div>
+                      </a>
+                      <div class="amp-appStore-descript">
+                          <h4 class="amp-appStore-title">课表查询</h4>
+                          <span class="amp-appStore-explain">学习课程[内]</span>
+                          <div class="amp-star">
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <small >112份评分</small>
+                          </div>
+                          <button type="button" class="btn  btn-xs amp-appStore-btnStore">收藏</button>
+                      </div>
+                  </div>
+
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                  <div class="amp-appStore-list">
+                      <a class="amp-appSearchResult-list" href="#">
+                          <span style="background:url('../img/png72/计算机报名.png')" class="amp-appStore-listIcon"></span>
+                          <div class='amp-appSearchResult-selDiv'><small>查看详情</small></div>
+                      </a>
+                      <div class="amp-appStore-descript">
+                          <h4 class="amp-appStore-title">计算机报名</h4>
+                          <span class="amp-appStore-explain">教学</span>
+                          <div class="amp-star">
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-grayStar"></i>
+                              <small >112份评分</small>
+                          </div>
+                          <button type="button" class="btn  btn-xs amp-appStore-btnStore">收藏</button>
+                      </div>
+                  </div>
+
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                  <div class="amp-appStore-list">
+                      <a class="amp-appSearchResult-list" href="#">
+                          <span style="background:url('../img/png72/课表查询.png')" class="amp-appStore-listIcon"></span>
+                          <div class='amp-appSearchResult-selDiv'><small>查看详情</small></div>
+                      </a>
+                      <div class="amp-appStore-descript">
+                          <h4 class="amp-appStore-title">我的课表</h4>
+                          <span class="amp-appStore-explain">学习课程</span>
+                          <div class="amp-star">
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <small >112份评分</small>
+                          </div>
+
+                          <button type="button" class="btn  btn-xs amp-appStore-btnStore">收藏</button>
+                      </div>
+                  </div>
+
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                  <div class="amp-appStore-list">
+                      <a class="amp-appSearchResult-list" href="#">
+                          <span style="background:url('../img/png72/会议室预约.png')" class="amp-appStore-listIcon"></span>
+                          <div class='amp-appSearchResult-selDiv'><small>查看详情</small></div>
+                      </a>
+                      <div class="amp-appStore-descript">
+                          <h4 class="amp-appStore-title">会议室预约</h4>
+                          <span class="amp-appStore-explain">生活</span>
+                          <div class="amp-star">
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-grayStar"></i>
+                              <i class="fa fa-star amp-appStore-grayStar"></i>
+                              <small >134份评分</small>
+                          </div>
+                          <button type="button" class="btn  btn-xs amp-appStore-btnStore">收藏</button>
+                      </div>
+                  </div>
+
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                  <div class="amp-appStore-list">
+                      <a class="amp-appSearchResult-list" href="#">
+                          <span style="background:url('../img/png72/学生业务咨询.png')" class="amp-appStore-listIcon"></span>
+                          <div class='amp-appSearchResult-selDiv'><small>查看详情</small></div>
+                      </a>
+                      <div class="amp-appStore-descript">
+                          <h4 class="amp-appStore-title">学生出国出境服务</h4>
+                          <span class="amp-appStore-explain">学工服务</span>
+                          <div class="amp-star">
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-grayStar"></i>
+                              <small >134份评分</small>
+                          </div>
+                          <button type="button" class="btn  btn-xs amp-appStore-btnStore">收藏</button>
+                      </div>
+                  </div>
+
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                  <div class="amp-appStore-list">
+                      <a class="amp-appSearchResult-list" href="#">
+                          <span style="background:url('../img/png72/学生缴费查询.png')" class="amp-appStore-listIcon"></span>
+                          <div class='amp-appSearchResult-selDiv'><small>查看详情</small></div>
+                      </a>
+                      <div class="amp-appStore-descript">
+                          <h4 class="amp-appStore-title">学生缴费查询</h4>
+                          <span class="amp-appStore-explain">生活</span>
+                          <div class="amp-star">
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-grayStar"></i>
+                              <small >134份评分</small>
+                          </div>
+                          <button type="button" class="btn  btn-xs amp-appStore-btnStore">收藏</button>
+                      </div>
+                  </div>
+
+              </div>
+          </div>
+          <div class="amp-appSearchResults-subTitle">生活服务</div>
+          <hr/>
+          <div class="row">
+              <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                  <div class="amp-appStore-list">
+                      <a class="amp-appSearchResult-list" href="#">
+                          <span style="background:url('../img/png72/会议室预约.png')" class="amp-appStore-listIcon"></span>
+                          <div class='amp-appSearchResult-selDiv'><small>查看详情</small></div>
+                      </a>
+                      <div class="amp-appStore-descript">
+                          <h4 class="amp-appStore-title">会议室预约</h4>
+                          <span class="amp-appStore-explain">生活</span>
+                          <div class="amp-star">
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-grayStar"></i>
+                              <i class="fa fa-star amp-appStore-grayStar"></i>
+                              <small >134份评分</small>
+                          </div>
+                          <button type="button" class="btn  btn-xs amp-appStore-btnStore">收藏</button>
+                      </div>
+                  </div>
+
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                  <div class="amp-appStore-list">
+                      <a class="amp-appSearchResult-list" href="#">
+                          <span style="background:url('../img/png72/学生缴费查询.png')" class="amp-appStore-listIcon"></span>
+                          <div class='amp-appSearchResult-selDiv'><small>查看详情</small></div>
+                      </a>
+                      <div class="amp-appStore-descript">
+                          <h4 class="amp-appStore-title">学生缴费查询</h4>
+                          <span class="amp-appStore-explain">生活</span>
+                          <div class="amp-star">
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-grayStar"></i>
+                              <small >134份评分</small>
+                          </div>
+                          <button type="button" class="btn  btn-xs amp-appStore-btnStore">收藏</button>
+                      </div>
+                  </div>
+
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                  <div class="amp-appStore-list">
+                      <a class="amp-appSearchResult-list" href="#">
+                          <span style="background:url('../img/png72/失物招领.png')" class="amp-appStore-listIcon"></span>
+                          <div class='amp-appSearchResult-selDiv'><small>查看详情</small></div>
+                      </a>
+                      <div class="amp-appStore-descript">
+                          <h4 class="amp-appStore-title">失物招领</h4>
+                          <span class="amp-appStore-explain">生活</span>
+                          <div class="amp-star">
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-grayStar"></i>
+                              <small >134份评分</small>
+                          </div>
+                          <button type="button" class="btn  btn-xs amp-appStore-btnStore">收藏</button>
+                      </div>
+                  </div>
+
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                  <div class="amp-appStore-list">
+                      <a class="amp-appSearchResult-list" href="#">
+                          <span style="background:url('../img/png72/教师因私出国申请服务.png')" class="amp-appStore-listIcon"></span>
+                          <div class='amp-appSearchResult-selDiv'><small>查看详情</small></div>
+                      </a>
+                      <div class="amp-appStore-descript">
+                          <h4 class="amp-appStore-title">教师因私出国申请服务</h4>
+                          <span class="amp-appStore-explain">生活</span>
+                          <div class="amp-star">
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-grayStar"></i>
+                              <small >134份评分</small>
+                          </div>
+                          <button type="button" class="btn  btn-xs amp-appStore-btnStore">收藏</button>
+                      </div>
+                  </div>
+
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                  <div class="amp-appStore-list">
+                      <a class="amp-appSearchResult-list" href="#">
+                          <span style="background:url('../img/png72/温馨小贴士.png')" class="amp-appStore-listIcon"></span>
+                          <div class='amp-appSearchResult-selDiv'><small>查看详情</small></div>
+                      </a>
+                      <div class="amp-appStore-descript">
+                          <h4 class="amp-appStore-title">温馨小贴士</h4>
+                          <span class="amp-appStore-explain">生活</span>
+                          <div class="amp-star">
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-grayStar"></i>
+                              <small >134份评分</small>
+                          </div>
+                          <button type="button" class="btn  btn-xs amp-appStore-btnStore">收藏</button>
+                      </div>
+                  </div>
+
+              </div>
+          </div>
+          <div class="amp-appSearchResults-subTitle">教务服务</div>
+          <hr/>
+          <div class="row">
+              <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                  <div class="amp-appStore-list">
+                      <a class="amp-appSearchResult-list" href="#">
+                          <span style="background:url('../img/png72/四六级报名.png')" class="amp-appStore-listIcon"></span>
+                          <div class='amp-appSearchResult-selDiv'><small>查看详情</small></div>
+                      </a>
+                      <div class="amp-appStore-descript">
+                          <h4 class="amp-appStore-title">四六级报名</h4>
+                          <span class="amp-appStore-explain">教学</span>
+                          <div class="amp-star">
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-grayStar"></i>
+                              <i class="fa fa-star amp-appStore-grayStar"></i>
+                              <small >134份评分</small>
+                          </div>
+                          <button type="button" class="btn  btn-xs amp-appStore-btnStore">收藏</button>
+                      </div>
+                  </div>
+
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                  <div class="amp-appStore-list">
+                      <a class="amp-appSearchResult-list" href="#">
+                          <span style="background:url('../img/png72/计算机报名.png')" class="amp-appStore-listIcon"></span>
+                          <div class='amp-appSearchResult-selDiv'><small>查看详情</small></div>
+                      </a>
+                      <div class="amp-appStore-descript">
+                          <h4 class="amp-appStore-title">计算机报名</h4>
+                          <span class="amp-appStore-explain">教学</span>
+                          <div class="amp-star">
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-yellowStar"></i>
+                              <i class="fa fa-star amp-appStore-grayStar"></i>
+                              <small >134份评分</small>
+                          </div>
+                          <button type="button" class="btn  btn-xs amp-appStore-btnStore">收藏</button>
+                      </div>
+                  </div>
+
+              </div>
+          </div>
+          <div class="text-center" style="margin-top: 80px;">
+              <div class="btn-group">
+                  <button class="btn btn-white" type="button"><i class="fa fa-chevron-left"></i></button>
+                  <button class="btn btn-white">1</button>
+                  <button class="btn btn-white  active">2</button>
+                  <button class="btn btn-white">3</button>
+                  <button class="btn btn-white">4</button>
+                  <button class="btn btn-white">5</button>
+                  <button class="btn btn-white">6</button>
+                  <button class="btn btn-white">7</button>
+                  <button class="btn btn-white" type="button"><i class="fa fa-chevron-right"></i> </button>
+              </div>
+          </div>
+      </div>
+      </div>
+     </div>
+   </div>
+
+
+
+<!-- Mainly scripts -->
+<script src="../js/jquery-2.1.1.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+
+</body>
+</html>

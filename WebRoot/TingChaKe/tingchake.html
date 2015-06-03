@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>应用管理平台首页</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Toastr style -->
+    <link href="../css/plugins/toastr/toastr.min.css" rel="stylesheet">
+
+    <!-- Gritter -->
+    <link href="../js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+
+    <!-- Data Tables -->
+    <link href="../css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="../css/plugins/dataTables/dataTables.responsive.css" rel="stylesheet">
+    <link href="../css/plugins/dataTables/dataTables.tableTools.min.css" rel="stylesheet">
+
+    
+    <link href="../css/animate.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+
+</head>
+<style type="text/css">
+    .amp-main-wrapper{
+        padding: 0 15px;
+    }
+    .amp-teacherInfo-editePanel{
+        width: 100%;
+        height: 50px;
+        margin-top: 15px;
+    }
+
+</style>
+<body class="gray-bg">
+
+	<div class="gray-bg amp-main-wrapper clearfix" >
+		<div class="row" style="margin-bottom: 10px;">
+            
+        </div>
+        <div class="rows">
+            <div class="col-md-8">
+                <div class="ibox amp-main-servicetips">
+                    <div class="ibox-title">
+                        <span class="title16">听课、查课记录表</span>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="alert alert-warning">
+                            {登录人}老师，您本月查听课记录尚未提交，请尽快提交您的听课记录，感谢您对学生工作的支持。
+                        </div>
+                        <form method="get" class="form-horizontal">
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">课程名称</label>
+                                <div class="col-sm-4">
+                                    <p class="form-control-static">{课程名称}</p>
+                                </div>
+                                <label class="col-sm-2 control-label">任课老师</label>
+                                <div class="col-sm-4">
+                                    <p class="form-control-static">{任课老师}</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">实到人数</label>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <label class="col-sm-2 control-label">迟到/早退人数</label>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">课堂纪律评价</label>
+                                <div class="col-sm-10">
+                                    <div class="btn-group">
+                                        <button class="btn btn-danger btn-outline"><i class="fa fa-star"></i> 好</button>
+                                        <button class="btn btn-warning btn-outline"><i class="fa fa-star-half-o"></i> 一般</button>
+                                        <button class="btn btn-default btn-outline"><i class="fa fa-star-o"></i> 差</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">课堂纪律存在问题及建议</label>
+
+                            </div>
+                            <textarea class="form-control" rows="5"></textarea>
+                            <div> &nbsp; </div>
+                            <div>
+                                <button class="btn btn-primary" >提交</button>
+                                <button class="btn btn-white" >重置</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="ibox amp-main-servicetips">
+                    <div class="ibox-title">
+                        <span class="title16">课程信息</span>
+                    </div>
+                    <div class="ibox-content">
+                        <form method="get" class="form-horizontal">
+                            <div class="form-group"><label class="col-sm-4 control-label">日期</label>
+                                <div class="col-sm-8">
+                                    <select class="form-control" name="account">
+                                        <option>2015-05-02 星期六</option>
+                                        <option></option>
+                                        <option></option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group"><label class="col-sm-4 control-label">课程节次</label>
+                                <div class="col-sm-8">
+                                    <select class="form-control" name="account">
+                                        <option>第一节（8:00-8:45）</option>
+                                        <option></option>
+                                        <option></option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row"><label class="col-sm-4 control-label">上课地点</label>
+                                <div class="col-sm-8">
+                                    <div class="input-group m-b">
+                                        <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row"><label class="col-sm-4 control-label">任课老师</label>
+                                <div class="col-sm-8">
+                                    <div class="input-group m-b">
+                                        <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-4 control-label"></div>
+                                <div class="col-sm-8">
+                                    <button class="btn btn-primary" >查询</button>
+                                    <button class="btn btn-white" >重置</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-4 control-label">课程名称</label>
+                                <div class="col-sm-8">
+                                    <p class="form-control-static">{课程名称}</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-4 control-label">课程类型</label>
+                                <div class="col-sm-8">
+                                    <p class="form-control-static">{课程类型}</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-4 control-label">班级人数</label>
+                                <div class="col-sm-8">
+                                    <p class="form-control-static">{班级人数}</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-4 control-label">班级</label>
+                                <div class="col-sm-8">
+                                    <p class="form-control-static">{班级}</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-4 control-label">专业</label>
+                                <div class="col-sm-8">
+                                    <p class="form-control-static">{专业}</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-4 control-label">学院</label>
+                                <div class="col-sm-8">
+                                    <p class="form-control-static">{学院}</p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>  
+        <div class="rows">
+            <div class="col-md-12">
+                <div class="ibox amp-main-servicetips">
+                    <div class="ibox-title">
+                        <span class="title16">历史 <small>（本学期：{本学期数量}） 总听课次数：{总听课次数}</small></span>
+                    </div>
+                    <div class="ibox-content">
+                        <table class="table table-bordered" id="editable">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>听课时间</th>
+                                <th>节次</th>
+                                <th>专业</th>
+                                <th>班级</th>
+                                <th>课程名称</th>
+                                <th>课程类型</th>
+                                <th>应到</th>
+                                <th>实到</th>
+                                <th>迟到早退</th>
+                                <th>课堂纪律评价</th>
+                                <th>意见与建议</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>2015-4-12</td>
+                                <td>第二节</td>
+                                <td>信息工程</td>
+                                <td>信息36</td>
+                                <td>网络基础</td>
+                                <td>必修</td>
+                                <td>36</td>
+                                <td>35</td>
+                                <td>1</td>
+                                <td>一般</td>
+                                <td>@mdo</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+
+
+
+    <!-- Mainly scripts -->
+    <script src="../js/jquery-2.1.1.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="../js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Flot -->
+    <script src="../js/plugins/flot/jquery.flot.js"></script>
+    <script src="../js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="../js/plugins/flot/jquery.flot.spline.js"></script>
+    <script src="../js/plugins/flot/jquery.flot.resize.js"></script>
+    <script src="../js/plugins/flot/jquery.flot.pie.js"></script>
+    
+    <!-- Data Tables -->
+    <script src="../js/plugins/dataTables/jquery.dataTables.js"></script>
+    <script src="../js/plugins/dataTables/dataTables.bootstrap.js"></script>
+    <script src="../js/plugins/dataTables/dataTables.responsive.js"></script>
+    <script src="../js/plugins/dataTables/dataTables.tableTools.min.js"></script>
+
+
+    <!-- Peity -->
+    <script src="../js/plugins/peity/jquery.peity.min.js"></script>
+    <script src="../js/demo/peity-demo.js"></script>
+
+    <!-- Custom and plugin javascript -->
+
+    <!-- jQuery UI -->
+    <script src="../js/plugins/jquery-ui/jquery-ui.min.js"></script>
+
+    <!-- Page-Level Scripts -->
+    <script>
+        $(document).ready(function() {
+            /* Init DataTables */
+            var oTable = $('#editable').dataTable();
+        });
+    </script>
+</body>
+</html>

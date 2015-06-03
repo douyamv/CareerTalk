@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>应用管理平台-登录</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/base.css" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet">
+</head>
+<style type="text/css">
+</style>
+
+<body class="white-bg amp-login-bg" id="amp-login-body" style="min-height: 650px;">
+    <div id="amp-login-main">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div class="amp-login-top"><img src="img/login-logo.png"></div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        </div>
+    </div>
+    <div class="row" style="padding-bottom: 125px;">
+        <div class="amp-login-lp col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div class="amp-login-linner">
+                <div class="amp-login-ltitle">您还可以使用以下方式登录</div>
+                <div class="amp-loing-style">
+                    <a href="javascript:void(0);"><span><i class="fa fa-qq" style="font-size: 14px;"></i></span><span>使用QQ账号登录</span></a>
+                </div>
+                <div class="amp-loing-style">
+                    <a href="javascript:void(0);"><span><i class="fa fa-weibo" style="font-size: 18px;"></i></span><span>使用新浪微博账号登录</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="amp-login-lp col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div class="amp-login-rinner" style="">
+                <ul class="nav nav-tabs amp-login-ul">
+                    <li class=""><a data-toggle="tab" href="#tab-1" aria-expanded="true"><i class="fa fa-qrcode" style="font-size: 16px;"></i>二维码登录</a></li>
+                    <li class="active"><a data-toggle="tab" href="#tab-2" aria-expanded="false">账号登录</a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div id="tab-1" class="tab-pane">
+                        <div class="ibox-content">
+                            <!-- 添加二维码登录的内容-->
+                        </div>
+                    </div>
+
+                    <div id="tab-2" class="tab-pane active">
+                        <div class="ibox-content">
+                            <form class="amp-login-form" role="form" action="index.html" onsubmit="return validateSubmit(this);">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <span class="input-group-addon" style="padding: 0 10px 0 11px;"><i class="fa fa-user"></i></span>
+                                        <input type="text" id="login-name" placeholder="用户名" class="form-control">
+                                    </div>
+                                    <span class="amp-login-error">请输入有效的手机号或邮箱</span>
+
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                                        <input type="text" id="login-password" placeholder="密码" class="form-control">
+                                    </div>
+                                    <span class="amp-login-error">请输入至少三位密码</span>
+
+                                </div>
+                                <div class="form-group">
+                                    <div class="checkbox i-checks">
+                                        <label class="amp-login-label">
+                                            <div class="icheckbox_square-green" style="position: relative;">
+                                                <input id="icheck" type="checkbox" style="position: absolute; opacity: 0;">
+                                                <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins>
+                                            </div>
+                                            <span>&nbsp;&nbsp;一周内免登陆</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <a type="submit" href="index.html" id="login-button" class="btn amp-btn-primary block full-width">登&nbsp;&nbsp;录</a>
+                                </div>
+                                <a href="#" class="amp-login-forgetp">
+                                    <small>忘记密码？</small>
+                                </a>
+                                <a href="#" class="amp-login-registernow">
+                                    <small>立即注册</small>
+                                </a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+    <div class="amp-login-footer">
+    <span>Copyright&nbsp;©&nbsp;2015 wisedu&nbsp;All&nbsp;Rights&nbsp;Reserved&nbsp;&nbsp;&nbsp;&nbsp;
+        版权所有&nbsp;&nbsp;江苏金智教育信息股份有限公司</span>
+    </div>
+
+    <div class="flare-wrapper">
+        <div class="flareRiseUp"></div>
+    </div>
+<!-- Mainly scripts -->
+
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins/iCheck/icheck.min.js"></script>
+<script src="js/login.js"></script>
+<script>
+</script>
+</body>
+</html>
